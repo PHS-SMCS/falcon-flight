@@ -64,9 +64,10 @@ The datasheets for the BMI270 and BMM350 are incredibly long and teedious to pic
 #### BMM350 [(Datasheet)](./datasheets/BMM350.pdf)
 
 * Consumes ~180µA at 100 Hz
+* 3.3v IO tolerant, but runs at 1.8v
 * True hard-iron + soft-iron compensation, factory calibrated
 * Noise: ~20 nT/√Hz
-* Package: 2.0 mm × 2.0 mm × 0.75 mm LGA-8
+* Package: 1.28 x 1.28 × 0.5 mm WLCSP
 * Up to 100Hz sampling rate
 
 **Supporting passives:** The BMM350 is supported by the following passives:
