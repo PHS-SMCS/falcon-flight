@@ -2,7 +2,6 @@
 
 Welcome to the **Falcon Flight** GitHub repository! This project contains all the design files, and documentation for the Falcon Flight embedded control board.
 
----
 
 ## 🚀 Overview
 
@@ -56,18 +55,15 @@ Stalling the motors can heat up the windings and drastically shorten the lifespa
     
 Improper shutdown can corrupt data on the Raspberry Pi, and can leave the sensor suite in an unrecoverable state.
 
----
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
----
 
 ## 📬 Support / Questions
 
 Open an issue or contact the designer directly at [eli.ferrara256@gmail.com](mailto:eli.ferrara256@gmail.com)
 
----
 
 **Designed by Eli Ferrara, Class of 2026**

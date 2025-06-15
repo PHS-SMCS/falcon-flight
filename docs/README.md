@@ -4,7 +4,7 @@ This page is for the hardware documentation of the Falcon Flight embedded contro
 
 ---
 
-<img src="/docs/FFB6.1_Schematic.svg" alt="Full Falcon Flight embedded controller board schematic" width="500" ALIGN="center" HSPACE="20" VSPACE="20"/>
+<img src="/docs/FFB6.1_Schematic.svg" alt="Full Falcon Flight embedded controller board schematic" width="1000" ALIGN="center" HSPACE="20" VSPACE="20"/>
 
 ## 🔧 Features
 
@@ -42,7 +42,6 @@ At an ambient temperature of 25°C, each motor can be run at up to 1.5A continuo
 
 This board uses the BMI270 IMU and BMM350 magnetometer to gather triaxial accelerometer, gyroscope, and magnetometer data. Each sensor is pre-connected via I2C, with I2C addresses of 0x68 and 0x14, respectively. These I2C addresses are preconfigured in hardware, and are not possible to change without physically altering the board.
 
----
 
 The datasheets for the BMI270 and BMM350 are incredibly long and teedious to pick information out of, so I have pulled the most important information to display here.
 
