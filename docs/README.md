@@ -4,7 +4,7 @@ This page is for the hardware documentation of the Falcon Flight embedded contro
 
 ---
 
-<img src="/docs/FFB6.1_Schematic.svg" alt="Full Falcon Flight embedded controller board schematic" width="1000" ALIGN="center" HSPACE="20" VSPACE="20"/>
+<img src="/docs/FFB6.1_Schematic.svg" alt="Full Falcon Flight embedded controller board schematic" width="100%" ALIGN="center" HSPACE="20" VSPACE="20"/>
 
 ## 🔧 Features
 
@@ -14,7 +14,7 @@ This board uses four Texas Instruments DRV8212P motor-driver ICs (Integrated Cir
 
 A data table for each motor driver connection is shown below:
 
-<img src="/images/Raspberry_Pi_Pinout.webp" alt="Raspberry Pi Zero 2W pinout, as a visual aid to the table below" width="200" ALIGN="right" HSPACE="20" VSPACE="20"/>
+<img src="/images/Raspberry_Pi_Pinout.webp" alt="Raspberry Pi Zero 2W pinout, as a visual aid to the table below" width="35%" ALIGN="right" HSPACE="20" VSPACE="20"/>
 
 | Motor | DRV8212p Pin | Raspberry Pi Pin |
 |-------|--------------|------------------|
