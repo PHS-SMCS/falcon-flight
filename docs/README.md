@@ -31,8 +31,8 @@ A data table for each motor driver connection is shown below:
 * A 22μF, 25V MLCC bulk capacitor, tied to VM and GND
 * A 100nF, 50V MLCC bypass capacitor, tied to VM and GND
 * A 100nF, 50V MLCC bypass capacitor, tied to VCC and GND
-* A 10kohm resistor, pulling nSleep `HIGH`. I elected to always keep each motor driver on, rather than allow them to be turned off in software to eliminate complexity and points of failure. According to the datasheet, the DRV8212p only draws ~10mA when idle, which makes it negligible for our purposes.
-* 2x 330ohm resistors in series with the INx pins. These protect the Raspberry Pi Zero 2W's GPIO pins from damage if an internal short occurs in the motor driver IC.
+* A 10kΩ resistor, pulling nSleep `HIGH`. I elected to always keep each motor driver on, rather than allow them to be turned off in software to eliminate complexity and points of failure. According to the datasheet, the DRV8212p only draws ~10mA when idle, which makes it negligible for our purposes.
+* 2x 330Ω resistors in series with the INx pins. These protect the Raspberry Pi Zero 2W's GPIO pins from damage if an internal short occurs in the motor driver IC.
 
 All DRV8212p motor driver ICs are heatsinked by the PCB. They are connected to a large ground plane shared by the top and bottom ground pours, as well as the internal GND layer, with at least 10 vias per driver. Under normal operating circumstances, heat dissipation should not be an issue.
 
@@ -56,8 +56,8 @@ The datasheets for the BMI270 and BMM350 are incredibly long and teedious to pic
 
 **Supporting passives:** The BMI270 is supported by the following passives:
 * A 10µF, 6.3v bypass capacitor, tied to 3v3 and GND.
-* A 100kohm resistor, tying SDO to GND (to set I2C address).
-* A 100kohm resistor, tying CSB to 3v3 (pulled high to VDDIO).
+* A 100kΩ resistor, tying SDO to GND (to set I2C address).
+* A 100kΩ resistor, tying CSB to 3v3 (pulled high to VDDIO).
 * 2x 100nF bypass capacitors, tying VDDIO to GND.
 
 
@@ -76,7 +76,7 @@ The datasheets for the BMI270 and BMM350 are incredibly long and teedious to pic
 * A 100nF, 16v bypass capacitor tying 1v8 to GND.
 * a 2.2µF, 16v bypass capacitor tying CRST to GND (used as offsite charge storage for `BMM350_magnetic_reset_and_wait`).
 
-Since the Raspberry Pi Zero 2W only has weak (~50kohm - ~65kohm) software-configurable pullup resistors, the board comes with 2.2kohm pullup resistors on the SDA and SCL lines, for better signal integrity above 100kHz speeds.
+Since the Raspberry Pi Zero 2W only has weak (~50kΩ - ~65kΩ) software-configurable pullup resistors, the board comes with 2.2kΩ pullup resistors on the SDA and SCL lines, for better signal integrity above 100kHz speeds.
 
 
 ### TP4057 Battery Charging [(Datasheet)](./datasheets/TP4057.pdf)
@@ -90,10 +90,10 @@ This board uses 2x TP4057 battery charging ICs, one for each battery. Each TP405
 * Supports only 1S1P LiPo batteries.
 
 **Supporting passives:** Each TP4057 is supported by the following passives:
-* A 5.1kohm resistor tying R<sub>PROG</sub> to GND. This resistance roughly corresponds to a charging current of 200mA, calculated by the equation R<sub>PROG</sub> = 1000V / I<sub>BAT</sub>.
+* A 5.1kΩ resistor tying R<sub>PROG</sub> to GND. This resistance roughly corresponds to a charging current of 200mA, calculated by the equation R<sub>PROG</sub> = 1000V / I<sub>BAT</sub>.
 * A 10μF, 25v bypass capacitor bypassing the positive and negative terminals of the LiPo battery.
-* A 120 mcd red LED, tied in series with a 1kohm resistor from VBUS to CHRG# (The TP4057's status indication outputs are open-drain.)
-* A 260 mcd green LED, tied in series with a 10kohm resistor from VBUS to STDBY#.
+* A 120 mcd red LED, tied in series with a 1kΩ resistor from VBUS to CHRG# (The TP4057's status indication outputs are open-drain.)
+* A 260 mcd green LED, tied in series with a 10kΩ resistor from VBUS to STDBY#.
 
 
 The TP4057 indicates its charging status via two LEDs. A table of the LED behavior is below:
@@ -106,7 +106,7 @@ The TP4057 indicates its charging status via two LEDs. A table of the LED behavi
 
 *About 20Hz.
 
-The TP4057 ICs are powered by the USB-C port on the board. This USB-C port is USB Type-C 2.0 "Upstream Facing Port" (UFP) spec compliant, meaning that it will request default USB power (500mA from a USB 2.0 source, 900mA from a USB 3.0 source.) The USB-C port uses only two 5.1kohm resistors on the CC1 and CC2 lines, so only passive current advertisement occurs. Thus, please only use USB-C compliant chargers with this board, as voltages higher than 5v will damage the charging circuitry.
+The TP4057 ICs are powered by the USB-C port on the board. This USB-C port is USB Type-C 2.0 "Upstream Facing Port" (UFP) spec compliant, meaning that it will request default USB power (500mA from a USB 2.0 source, 900mA from a USB 3.0 source.) The USB-C port uses only two 5.1kΩ resistors on the CC1 and CC2 lines, so only passive current advertisement occurs. Thus, please only use USB-C compliant chargers with this board, as voltages higher than 5v will damage the charging circuitry.
 
 ### MT3608 Boost Converter [(Datasheet)](./datasheets/MT3608.pdf)
 
@@ -119,9 +119,9 @@ This board uses the MT3608 Boost Converter IC, in conjunction with a 6.8µH indu
 * Package: SOT-23-6
 
 **Supporting passives:** The MT3608 is supported by the following passives:
-* A 6.8μH ferrite-core 5.0 x 5.0 x 2.0 mm SMD inductor (~74mohm DCR, I<sub>sat</sub>: 2.3A, I<sub>rms</sub>: 2.1A @ 100kHz, 0.1v)
+* A 6.8μH ferrite-core 5.0 x 5.0 x 2.0 mm SMD inductor (~74mΩ DCR, I<sub>sat</sub>: 2.3A, I<sub>rms</sub>: 2.1A @ 100kHz, 0.1v)
 * A SS54 DO-214AC SMD Schottky Diode
-* A 220kohm / 30kohm resistor divider, dividing FB between 5v and GND. Using the specified equation, with internal reference VREF = 0.6v, V<sub>OUT</sub> = V<sub>REF</sub> × (1 + R<sub>1</sub>/R<sub>2</sub>) = ~5v.
+* A 220kΩ / 30kΩ resistor divider, dividing FB between 5v and GND. Using the specified equation, with internal reference VREF = 0.6v, V<sub>OUT</sub> = V<sub>REF</sub> × (1 + R<sub>1</sub>/R<sub>2</sub>) = ~5v.
 * A 22μF 25v, 1μF 50v, and a 100nF 50v decoupling capacitor to filter and absorb switching noise. 
 
 The MT3608 is connected to the Raspberry Pi battery via the DMP2035U-7 P-Channel Power MOSFET [(Datasheet)](./datasheets/DMP2035U-7.pdf), controlled by the power switch. This design choice was implemented to relieve the strain of passing high current through the power switch in 'analog mode', and to allow for a compact power switch when turning on two batteries.
