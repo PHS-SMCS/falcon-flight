@@ -37,7 +37,7 @@ Looking for interface code? Check out the dedicated Falcon Flight python library
 * ✅ Charge the batteries via the built-in USB-C port, using any USB-C power source (chromebook chargers included!)
 * ✅ Charge batteries while using the board
 * ✅ Connect additional sensors via the 6-pin IO breakout
-* ✅ Connect up to four motors to the motor driver `out` pins
+* ✅ Connect up to four motors to the motor driver `OUTx` pins
 
 
 ## ❌ Don’ts
