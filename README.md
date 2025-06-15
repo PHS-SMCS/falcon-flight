@@ -3,7 +3,7 @@
 Welcome to the **Falcon Flight** GitHub repository! This project contains all the design files, and documentation for the Falcon Flight embedded control board.
 
 
-## 🚀 Overview
+## Overview
 
 Project Falcon Flight (previously The Blimp Project) is a project focused on engineering a complete blimp gondola under extreme design constraints. In years past, a mix of motor driver issues and reversed battery polarity led to only a fraction of SMCS students getting their blimps in the air before the summer. Hence, the Falcon Flight embedded controller board was developed to ease the progression of this project.
 
@@ -18,14 +18,14 @@ The Falcon Flight custom PCB was designed by a SMCS student, for SMCS students. 
 For a more comprehensive list of features and documentation, visit the [hardware documentation](https://github.com/PHS-SMCS/falcon-flight/tree/main/docs), or the [blog post](eliferrara.com).
 
 
-## 📦 What You'll Find in This Repo
+## What You'll Find in This Repo
 
 * [`PCB/`](./PCB/) – EasyEDA source files & Gerbers
 * [`images/`](./images/) – 3D renders & and silkscreen illustrations
 * [`docs/`](./docs/) – Schematics (PDF), BOM, user guide
 
 
-## 🐍 Python Library
+## Python Library
 
 Looking for interface code? Check out the dedicated Falcon Flight python library to get started.
 
@@ -56,12 +56,12 @@ Stalling the motors can heat up the windings and drastically shorten the lifespa
 Improper shutdown can corrupt data on the Raspberry Pi, and can leave the sensor suite in an unrecoverable state.
 
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
 
-## 📬 Support / Questions
+## Support / Questions
 
 Open an issue or contact the designer directly at [eli.ferrara256@gmail.com](mailto:eli.ferrara256@gmail.com)
 

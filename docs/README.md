@@ -6,7 +6,7 @@ This page is for the hardware documentation of the Falcon Flight embedded contro
 
 <img src="/docs/FFB6.1_Schematic.svg" alt="Full Falcon Flight embedded controller board schematic" width="100%" ALIGN="center" HSPACE="20" VSPACE="20"/>
 
-## 🔧 Features
+## Features
 
 ### DRV8212p Motor Drivers [(Datasheet)](./datasheets/DRV8212p.pdf)
 
