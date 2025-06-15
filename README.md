@@ -45,16 +45,16 @@ Looking for interface code? Check out the dedicated Falcon Flight python library
 
 * ❌ **Don't unplug the internal batteries under ANY circumstances**
    
-        This greatly reduces the chances of destroying the internal circuitry via reversed polarity. Out of all the 'don'ts', this is the most important.
+This greatly reduces the chances of destroying the internal circuitry via reversed polarity. Out of all the 'don'ts', this is the most important.
 * ❌ Don’t power the Raspberry Pi via its Micro-USB port
     
-        Different voltages and a disconnected ground net will lead to instability and circuit damage if the Raspberry Pi is powered by both the battery & the Micro-USB port.
+Different voltages and a disconnected ground net will lead to instability and circuit damage if the Raspberry Pi is powered by both the battery & the Micro-USB port.
 * ❌ Don't stall the motors when running
     
-        Stalling the motors can heat up the windings and drastically shorten the lifespan of the motors, as well as the motor driver ICs.
+Stalling the motors can heat up the windings and drastically shorten the lifespan of the motors, as well as the motor driver ICs.
 * ❌ Don't disconnect the 40-pin header without shutting off the board first
     
-        Improper shutdown can corrupt data on the Raspberry Pi, and can leave the sensor suite in an unrecoverable state.
+Improper shutdown can corrupt data on the Raspberry Pi, and can leave the sensor suite in an unrecoverable state.
 
 ---
 
